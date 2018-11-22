@@ -55,6 +55,9 @@ int main() {
     
     for(int i = 0 ; i < div_.size() ; i++)
         reminder.push_back(div_[i]);
+    for (int i =0 ; i < divBits-1; i++) {
+        reminder.push_back(0);
+    }
     
     divide();
     
@@ -66,7 +69,6 @@ int main() {
     cout << vector_to_string(divisor) << "\n";
     
     return 0;
-    
 }
 
 
@@ -92,10 +94,3 @@ string vector_to_string(vector<int> intVector) {
     }
     return returnstring;
 }
-
-
-
-
-
-
-
