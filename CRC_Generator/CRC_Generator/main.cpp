@@ -62,7 +62,7 @@ int main() {
         crc[i] = div_[i] ^ reminder[i];
     
     string crc_code  = vector_to_string(crc);
-    cout<< messageStr + crc_code << "\n";
+    cout<< crc_code << "\n";
 
     return 0;
     
