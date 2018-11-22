@@ -62,7 +62,8 @@ int main() {
         crc.push_back(div_[i] ^ reminder[i]);
     
     string crc_code  = vector_to_string(crc);
-    cout<< crc_code << "\n";
+    cout << crc_code << "\n";
+    cout << vector_to_string(divisor) << "\n";
     
     return 0;
     
