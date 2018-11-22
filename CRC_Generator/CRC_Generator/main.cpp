@@ -25,7 +25,7 @@ void divide(vector<int> div_, vector<int> divisor, vector<int> reminder);
 string vector_to_string(vector<int> intVector);
 
 int main() {
-
+    
     //cout<<"enter the message";
     getline(cin, messageStr);
     
@@ -34,16 +34,16 @@ int main() {
     
     for (int i = 0 ; i < messageStr.length(); i++) {        //convert message string to binary vector
         if(messageStr[i] == '0')
-            message[i] = 0;
+            message.push_back(0);
         else if(messageStr[i] == '1')
-            message[i] = 1;
+            message.push_back(1);
     }
     
     for (int i = 0 ; i < divisorStr.length() ; i++) {       //convert divisor string to binary vector
         if(divisorStr[i] == '0')
-            divisor[i] = 0;
+            divisor.push_back(0);
         else if(divisorStr[i] == '1')
-            divisor[i] = 1;
+            divisor.push_back(1);
     }
     
     mBits = messageStr.length();
@@ -51,19 +51,19 @@ int main() {
     tLength = mBits + divBits - 1;
     
     for (int i = 0 ; i < message.size(); i++)
-        div_[i] = message[i];
+        div_.push_back(message[i]);
     
     for(int i = 0 ; i < div_.size() ; i++)
-        reminder[i] = div_[i];
+        reminder.push_back(div_[i]);
     
     divide(div_, divisor, reminder);
     
     for (int i = 0 ; i < div_.size(); i++)
-        crc[i] = div_[i] ^ reminder[i];
+        crc.push_back(div_[i] ^ reminder[i]);
     
     string crc_code  = vector_to_string(crc);
     cout<< crc_code << "\n";
-
+    
     return 0;
     
 }
