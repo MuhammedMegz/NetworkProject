@@ -55,9 +55,12 @@ int main() {
     
     for(int i = 0 ; i < div_.size() ; i++)
         reminder.push_back(div_[i]);
-    for (int i =0 ; i < divBits-1; i++) {
+    
+    for (int i =0 ; i < divBits-1; i++){
         reminder.push_back(0);
+        div_.push_back(0);
     }
+    
     
     divide();
     
