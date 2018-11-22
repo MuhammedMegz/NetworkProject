@@ -26,10 +26,10 @@ string vector_to_string(vector<int> intVector);
 
 int main() {
 
-    cout<<"enter the message";
+    //cout<<"enter the message";
     getline(cin, messageStr);
     
-    cout << "enter the divisor";
+    //cout << "enter the divisor";
     getline(cin, divisorStr);
     
     for (int i = 0 ; i < messageStr.length(); i++) {        //convert message string to binary vector
@@ -62,6 +62,7 @@ int main() {
         crc[i] = div_[i] ^ reminder[i];
     
     string crc_code  = vector_to_string(crc);
+    cout<< messageStr + crc_code << "\n";
 
     return 0;
     
