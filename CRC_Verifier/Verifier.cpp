@@ -9,6 +9,7 @@ Verifier::Verifier(string msg, string polynomial){
 
 void Verifier::setMsg(string msg){
 
+	this->msg.clear();
 	for(int i=0, n=msg.length(); i<n; i++){
 		if(msg[i] == '1')
 			this->msg.push_back(1);
@@ -20,6 +21,7 @@ void Verifier::setMsg(string msg){
 
 void Verifier::setPolynomial(string polynomial){
 
+	this->polynomial.clear();
 	for(int i=0, n=polynomial.length(); i<n; i++){
 		if(polynomial[i] == '1')
 			this->polynomial.push_back(1);
