@@ -86,7 +86,7 @@ void divide(vector<int> div_, vector<int> divisor, vector<int> reminder){
 string vector_to_string(vector<int> intVector) {
     string returnstring = "";
     for (int i = 0 ; i < intVector.size() ; i++){
-        char c = intVector[i];
+        char c = '0' + intVector[i];
         returnstring += c;
     }
     return returnstring;
