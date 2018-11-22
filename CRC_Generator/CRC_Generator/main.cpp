@@ -21,7 +21,7 @@ int mBits, divBits, tLength;
 string messageStr;
 string divisorStr;
 
-void divide(vector<int> div_, vector<int> divisor, vector<int> reminder);
+void divide();
 string vector_to_string(vector<int> intVector);
 
 int main() {
@@ -56,7 +56,7 @@ int main() {
     for(int i = 0 ; i < div_.size() ; i++)
         reminder.push_back(div_[i]);
     
-    divide(div_, divisor, reminder);
+    divide();
     
     for (int i = 0 ; i < div_.size(); i++)
         crc.push_back(div_[i] ^ reminder[i]);
@@ -69,7 +69,7 @@ int main() {
 }
 
 
-void divide(vector<int> div_, vector<int> divisor, vector<int> reminder){
+void divide(){
     int current = 0;
     while(1){
         for (int i = 0 ; i < divisor.size(); i++)
